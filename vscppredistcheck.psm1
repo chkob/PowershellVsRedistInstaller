@@ -17,8 +17,10 @@ param (
  [ValidateNotNullOrEmpty()]$Value
 )
     try {
-    Get-ItemProperty -Path "$($Path+$Value)" -ErrorAction Stop | Out-Null # | Select-Object -ExpandProperty $Value -ErrorAction Stop | Out-Null
-        return $true
+        #Get-ItemProperty -Path "$($Path+$Value)" -ErrorAction Stop | Out-Null # | Select-Object -ExpandProperty $Value -ErrorAction Stop | Out-Null
+        $values = Get-ChildItem -Path "$Path" | Select-Object Name
+        $found = "$values".Contains("$Value")
+        return $found
     }
     catch {
         return $false
