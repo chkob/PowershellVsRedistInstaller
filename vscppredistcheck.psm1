@@ -59,6 +59,9 @@ param (
 	## update from https://stackoverflow.com/a/34209692/665879 on 2022-02-16
 	'mscpp2019x64' = [PSCustomObject]@{Name = 'mscpp2019x64'; Configuration = 'x64'; SilentInstallArgs = '/quiet /norestart'; Version = '14.25.28508'; Description = 'Microsoft Visual C++ 2015-2019 Redistributable (x64)'; RegPath = 'HKLM:\SOFTWARE\Classes\Installer\Dependencies\VC,redist.x64,amd64,14.25,bundle\Dependents\'; RegValue = '{6913e92a-b64e-41c9-a5e6-cef39207fe89}'; DownloadUrl = 'https://aka.ms/vs/16/release/vc_redist.x64.exe'}
 	'mscpp2019x86' = [PSCustomObject]@{Name = 'mscpp2019x86'; Configuration = 'x86'; SilentInstallArgs = '/quiet /norestart'; Version = '14.25.28508'; Description = 'Microsoft Visual C++ 2015-2019 Redistributable (x86)'; RegPath = 'HKLM:\SOFTWARE\Classes\Installer\Dependencies\VC,redist.x64,x86,14.25,bundle\Dependents\'; RegValue = '{65e650ff-30be-469d-b63a-418d71ea1765}'; DownloadUrl = 'https://aka.ms/vs/16/release/vc_redist.x86.exe'}
+
+	'mscpp2022x64' = [PSCustomObject]@{Name = 'mscpp2022x64'; Configuration = 'x64'; SilentInstallArgs = '/quiet /norestart'; Version = '14.31.31103'; Description = 'Microsoft Visual C++ 2015-2022 Redistributable (x64)'; RegPath = 'HKLM:\SOFTWARE\Classes\Installer\Dependencies\VC,redist.x64,amd64,14.31,bundle\Dependents\'; RegValue = '{2aaf1df0-eb13-4099-9992-962bb4e596d1}'; DownloadUrl = 'https://aka.ms/vs/17/release/vc_redist.x64.exe'}
+	'mscpp2022x86' = [PSCustomObject]@{Name = 'mscpp2022x86'; Configuration = 'x86'; SilentInstallArgs = '/quiet /norestart'; Version = '14.31.31103'; Description = 'Microsoft Visual C++ 2015-2022 Redistributable (x86)'; RegPath = 'HKLM:\SOFTWARE\Classes\Installer\Dependencies\VC,redist.x64,x86,14.31,bundle\Dependents\'; RegValue = '{41d7b770-418a-43b7-95a5-f925fff05789}'; DownloadUrl = 'https://aka.ms/vs/17/release/vc_redist.x86.exe'}
 	}
 
     try {
